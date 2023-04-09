@@ -1,0 +1,34 @@
+<div  class="container">
+<div  class="flex justify-between w-[343px] h-[51px]  items-center bg-white rounded-lg mx-4 mt-[25px]">
+    <div class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-[14px]" width="14.579" height="14.579" viewBox="0 0 14.579 14.579"><defs><style>.a{opacity:0.4;}.b{fill:#1a1824;}</style></defs><g class="a"><path class="b" d="M6.42,0a6.42,6.42,0,1,0,6.42,6.42A6.428,6.428,0,0,0,6.42,0Zm0,11.655A5.235,5.235,0,1,1,11.655,6.42,5.241,5.241,0,0,1,6.42,11.655Z"/><g transform="translate(9.996 9.996)"><path class="b" d="M355.455,354.617l-3.4-3.4a.593.593,0,1,0-.838.838l3.4,3.4a.593.593,0,0,0,.838-.838Z" transform="translate(-351.046 -351.046)"/></g></g></svg>
+        <input [(ngModel)]="searchTerm" (ngModelChange)="search()"  type="text" placeholder=" Mekan ara" class="bg-transparent outline-none focus:outline-none placeholder-gray-500 text-gray-800" />
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46"><defs><style>.a{fill:#fff;}.b{fill:#1a1824;}</style></defs><rect class="a" width="46" height="46"/><g transform="translate(15 31) rotate(-90)"><path class="b" d="M4.34,5.6V.715a.714.714,0,1,0-1.429,0V5.6a3.628,3.628,0,0,0,0,7.114V15.93a.714.714,0,1,0,1.429,0V12.715a3.628,3.628,0,0,0,0-7.114Zm-.714,5.753a2.2,2.2,0,1,1,2.2-2.2A2.2,2.2,0,0,1,3.626,11.355Z" transform="translate(8.749)"/><path class="b" d="M4.34,2.013V.715a.715.715,0,1,0-1.429,0v1.3a3.628,3.628,0,0,0,0,7.114v6.8a.715.715,0,1,0,1.429,0V9.121a3.625,3.625,0,0,0,0-7.108ZM3.626,7.766a2.2,2.2,0,1,1,2.2-2.2A2.2,2.2,0,0,1,3.626,7.766Z"/></g></svg>
+  </div>
+  
+  <div class="mx-4 mt-[30px]">
+    <h1 class="text-black font-bold">Sonuçlar</h1>
+   <div class="mt-[15px] w-[343px] h-[260px] bg-white rounded-xl "  *ngFor="let title of getFilteredTitles(); let i = index">
+        <div class="w-[56px] mx-2 my-2 absolute rounded-lg flex justify-center items-center h-[32px] bg-red-700">
+            <svg class="text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="13" height="12.35">
+                <path fill-rule="evenodd" d="M10 15.937l4.118 2.44a.83.83 0 0 0 1.26-.876l-.77-4.53 3.308-3.223a.83.83 0 0 0-.458-1.416l-4.59-.665-2.054-4.148a.83.83 0 0 0-1.494 0l-2.054 4.148-4.59.665a.83.83 0 0 0-.458 1.416l3.308 3.223-.77 4.53a.83.83 0 0 0 1.26.876L10 15.938z" clip-rule="evenodd" />
+              </svg> <h1 class="text-white">4.9</h1>
+        </div>
+        <img  src="assets/Images/visneli-sarmal.png">
+        <div class="mt-[10px]">
+            <h1 class="text-black font-bold text-lg w-[218px] h-[43px]">{{title}}</h1>
+            </div>
+            <div class="flex flex-wrap justify-between mt-[5px]">
+                <div class="">
+                <p class="text-black font-bold opacity-50">Coffe,Tatli</p>
+                <p class="text-black font-bold">3km yakininda</p>
+            </div>
+            <div class="">
+                    <p class="text-black opacity-50 font-bold">Min. Sipariş tutari : ₺30</p>
+                <p class="text-black/50 font-bold"><span class="text-green-600 font-bold">İşletme Açik</span> 10:00/22:00</p>
+                </div>
+            </div>
+    </div>
+</div>  
+</div>
